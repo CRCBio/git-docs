@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3 - Branching and Merging &mdash; Git 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 4 - Collaborating with GitHub" href="module4_collaborating_with_github.html" />
+    <link rel="prev" title="Module 2 - Working with Git Locally" href="module2_working_with_git_locally.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="module1_understanding_git_and_version_control.html">Module 1 - Understanding Git and Version Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2_working_with_git_locally.html">Module 2 - Working with Git Locally</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 3 - Branching and Merging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-branches">Understanding Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#switching-and-merging-branches">Switching and Merging Branches</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module4_collaborating_with_github.html">Module 4 - Collaborating with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5_advanced_git_and_github_concepts.html">Module 5 - Advanced Git and GitHub Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6_troubleshooting.html">Module 6 - Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7_conclusion.html">Module 7 - Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_cheatsheet.html">Git Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Module 3 - Branching and Merging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/module3_branching_and_merging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-3-branching-and-merging">
+<h1>Module 3 - Branching and Merging<a class="headerlink" href="#module-3-branching-and-merging" title="Link to this heading"></a></h1>
+<section id="understanding-branches">
+<h2>Understanding Branches<a class="headerlink" href="#understanding-branches" title="Link to this heading"></a></h2>
+<p>Branching is a powerful feature in Git that allows you to work on different
+aspects of your bioinformatics project in isolation. Each branch is like a
+separate line of development, which is incredibly useful when working on
+multiple features or experiments simultaneously. You can create branches using
+the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> command and switch between them using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code>.</p>
+</section>
+<section id="switching-and-merging-branches">
+<h2>Switching and Merging Branches<a class="headerlink" href="#switching-and-merging-branches" title="Link to this heading"></a></h2>
+<p>Merging is the process of combining changes from one branch into another. When
+you’ve completed a feature or experiment on a branch, you can merge it into the
+main project branch. This integration of changes is done using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>
+command. However, conflicts may arise if changes in one branch conflict with
+those in another. Git provides tools to resolve these conflicts and ensure a
+smooth merge.</p>
+<div class="admonition-task admonition">
+<p class="admonition-title">Task</p>
+<p><strong>Step 1: Ensure You’re on the Main Branch</strong></p>
+<p>Before creating new branches, ensure you are on the main branch. You can
+check your current branch using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
+</pre></div>
+</div>
+<p>If you’re not on the main branch, switch to it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+</pre></div>
+</div>
+<p><strong>Step 2: Create a New Branch</strong></p>
+<p>To create a new branch, use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span></code> command followed by the
+name of the branch you want to create. For example, to create a branch for
+sequence alignment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/sequence-alignment
+</pre></div>
+</div>
+<p>This command both creates the new branch and checks it out, switching you to
+the new branch.</p>
+<p><strong>Step 3: Work on Your Task</strong></p>
+<p>Now that you’re on the <code class="docutils literal notranslate"><span class="pre">feature/sequence-alignment</span></code> branch, you can start
+working on your sequence alignment task. Make changes, add files, and commit
+your work as needed using standard Git commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make changes to files</span>
+<span class="c1"># Add changes to the staging area</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+<span class="c1"># Commit your changes with a descriptive message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implement sequence alignment feature&quot;</span>
+</pre></div>
+</div>
+<p><strong>Step 4: Create and Switch to Another Branch</strong></p>
+<p>To work on another task, such as <code class="docutils literal notranslate"><span class="pre">feature/data-visualization</span></code>, you can
+create and switch to a new branch in the same way as in Step 2:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/data-visualization
+</pre></div>
+</div>
+<p>Now, you’re on the <code class="docutils literal notranslate"><span class="pre">feature/data-visualization</span></code> branch, and you can make
+changes specific to this task. Again, use standard Git commands to make
+changes and commit as needed.</p>
+<p><strong>Step 5: Switch Between Branches</strong></p>
+<p>You can switch between branches at any time using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code>
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Switch back to the &quot;feature/sequence-alignment&quot; branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>feature/sequence-alignment
+</pre></div>
+</div>
+<p><strong>Step 6: Merge Your Work</strong></p>
+<p>Once you’ve completed the tasks on your feature branches and tested them
+thoroughly, you can merge them back into the main branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Switch to the main branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="c1"># Merge the feature/sequence-alignment branch into main</span>
+git<span class="w"> </span>merge<span class="w"> </span>feature/sequence-alignment
+</pre></div>
+</div>
+<p>Repeat the merge process for the <code class="docutils literal notranslate"><span class="pre">feature/data-visualization</span></code> branch or
+any other feature branches you’ve created.</p>
+<p><strong>Step 7: Delete Feature Branches</strong></p>
+<p>After merging your changes, you can delete the feature branches if you no
+longer need them:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete the feature/sequence-alignment branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/sequence-alignment
+<span class="c1"># Delete the feature/data-visualization branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/data-visualization
+</pre></div>
+</div>
+<p>Creating separate branches for different tasks helps you keep your codebase
+organized and allows for concurrent development of multiple features or bug
+fixes. It also makes it easier to isolate and test changes before merging
+them into the main branch.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module2_working_with_git_locally.html" class="btn btn-neutral float-left" title="Module 2 - Working with Git Locally" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module4_collaborating_with_github.html" class="btn btn-neutral float-right" title="Module 4 - Collaborating with GitHub" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Phil Charron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
