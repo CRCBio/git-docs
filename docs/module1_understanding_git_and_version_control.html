@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 1 - Understanding Git and Version Control &mdash; Git 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 2 - Working with Git Locally" href="module2_working_with_git_locally.html" />
+    <link rel="prev" title="Welcome to CRCBio’s Git documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 1 - Understanding Git and Version Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-version-control">Introduction to Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-basics">Git Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-git">Setting Up Git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module2_working_with_git_locally.html">Module 2 - Working with Git Locally</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3_branching_and_merging.html">Module 3 - Branching and Merging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module4_collaborating_with_github.html">Module 4 - Collaborating with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5_advanced_git_and_github_concepts.html">Module 5 - Advanced Git and GitHub Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6_troubleshooting.html">Module 6 - Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7_conclusion.html">Module 7 - Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_cheatsheet.html">Git Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Module 1 - Understanding Git and Version Control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/module1_understanding_git_and_version_control.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-1-understanding-git-and-version-control">
+<h1>Module 1 - Understanding Git and Version Control<a class="headerlink" href="#module-1-understanding-git-and-version-control" title="Link to this heading"></a></h1>
+<section id="introduction-to-version-control">
+<h2>Introduction to Version Control<a class="headerlink" href="#introduction-to-version-control" title="Link to this heading"></a></h2>
+<p>In the field of bioinformatics, understanding the principles of version control
+is paramount. <strong>Version control</strong> allows you to track changes, collaborate with
+team members, and maintain a historical record of your work. <strong>Git</strong> is a
+distributed version control system that we will use for managing bioinformatics
+projects. It enables you to keep track of changes in your code and data, making
+it an indispensable tool for reproducible research.</p>
+</section>
+<section id="git-basics">
+<h2>Git Basics<a class="headerlink" href="#git-basics" title="Link to this heading"></a></h2>
+<p>Before diving into Git, let’s clarify some key concepts. A <strong>repository</strong> is a
+place where Git stores your project’s files and the entire history of changes.
+Each <strong>commit</strong> represents a snapshot of your project at a specific point in
+time. <strong>Branches</strong> allow you to work on different features or experiments
+independently. <strong>Merging</strong> combines changes from different branches into one
+cohesive project. You can also <strong>clone</strong> a repository to make a copy on your
+local machine and <strong>fork</strong> a repository on GitHub to contribute to someone
+else’s project.</p>
+</section>
+<section id="setting-up-git">
+<h2>Setting Up Git<a class="headerlink" href="#setting-up-git" title="Link to this heading"></a></h2>
+<p>To get started with Git, you’ll need to install it on your workstation and
+configure your username and email. Once you’re set up, you can begin creating
+repositories to manage your bioinformatics projects.</p>
+<div class="admonition-task admonition">
+<p class="admonition-title">Task</p>
+<p><strong>Step 1: Install Git</strong></p>
+<p>Test if Git is installed on your workstation using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code>. If Git is not
+already installed on your  workstation, you’ll need to install it.
+The installation process may vary depending on your operating system.</p>
+<ul>
+<li><dl>
+<dt>Linux (Debian/Ubuntu):</dt><dd><p>You can use the package manager to install Git:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>macOS:</dt><dd><p>Git can be installed via Homebrew:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>git
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Step 2: Configure Git</strong></p>
+<p>After installing Git, you need to configure it with your name and email
+address, which will be associated with your commits:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+</pre></div>
+</div>
+<p>You can also configure other settings, such as your preferred text editor
+and default branch name. Use the following commands to set these options:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span><span class="s2">&quot;nano&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span><span class="s2">&quot;main&quot;</span>
+</pre></div>
+</div>
+<p><strong>Step 3: Generate SSH Key</strong></p>
+<p>If you plan to use Git with remote repositories that require SSH
+authentication (e.g., GitHub, GitLab), you should generate an SSH key and
+add it to your SSH agent.</p>
+<p>To generate an SSH key:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+<p>Follow the prompts to save the key in the default location
+(~/.ssh/id_ed25519).</p>
+<p>To add your SSH key to the SSH agent:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</pre></div>
+</div>
+<p><strong>Step 4: Test Your Configuration</strong></p>
+<p>To test whether Git is configured correctly, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>This should display the installed Git version. That’s it! You’ve
+successfully set up Git on your bioinformatics workstation. You can now
+start using Git for version control in your bioinformatics projects.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to CRCBio’s Git documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module2_working_with_git_locally.html" class="btn btn-neutral float-right" title="Module 2 - Working with Git Locally" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Phil Charron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Cheatsheet &mdash; Git 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Module 7 - Conclusion" href="module7_conclusion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="module1_understanding_git_and_version_control.html">Module 1 - Understanding Git and Version Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2_working_with_git_locally.html">Module 2 - Working with Git Locally</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3_branching_and_merging.html">Module 3 - Branching and Merging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module4_collaborating_with_github.html">Module 4 - Collaborating with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5_advanced_git_and_github_concepts.html">Module 5 - Advanced Git and GitHub Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6_troubleshooting.html">Module 6 - Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7_conclusion.html">Module 7 - Conclusion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git Cheatsheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-init-initializing-a-new-git-repository"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> - Initializing a New Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-clone-cloning-a-remote-repository"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> - Cloning a Remote Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-status-checking-the-status-of-your-repository"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> - Checking the Status of Your Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-add-staging-changes"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> - Staging Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-commit-committing-changes"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> - Committing Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-branch-managing-branches"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> - Managing Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-checkout-switching-between-branches"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> - Switching Between Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-merge-merging-branches"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code> - Merging Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-pull-updating-your-local-repository"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> - Updating Your Local Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-push-pushing-changes-to-a-remote-repository"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> - Pushing Changes to a Remote Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-log-viewing-commit-history"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> - Viewing Commit History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-diff-viewing-changes-between-commits"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> - Viewing Changes Between Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-stash-temporarily-stashing-changes"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code> - Temporarily Stashing Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-remote-managing-remote-repositories"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span></code> - Managing Remote Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Git Cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/git_cheatsheet.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git-cheatsheet">
+<h1>Git Cheatsheet<a class="headerlink" href="#git-cheatsheet" title="Link to this heading"></a></h1>
+<p>Here are some common Git commands and examples of their usage:</p>
+<section id="git-init-initializing-a-new-git-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> - Initializing a New Git Repository<a class="headerlink" href="#git-init-initializing-a-new-git-repository" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> This command initializes a new Git repository in the current
+directory, allowing you to start version controlling your project.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>my_project
+<span class="nb">cd</span><span class="w"> </span>my_project
+git<span class="w"> </span>init
+</pre></div>
+</div>
+</section>
+<section id="git-clone-cloning-a-remote-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> - Cloning a Remote Repository<a class="headerlink" href="#git-clone-cloning-a-remote-repository" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Clone an existing Git repository from a remote server, creating a
+local copy for you to work on.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/repo.git
+</pre></div>
+</div>
+</section>
+<section id="git-status-checking-the-status-of-your-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> - Checking the Status of Your Repository<a class="headerlink" href="#git-status-checking-the-status-of-your-repository" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> View the current state of your repository, including which files are
+modified, staged, or untracked.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</section>
+<section id="git-add-staging-changes">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> - Staging Changes<a class="headerlink" href="#git-add-staging-changes" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Stage changes for the next commit. You can specify files or use
+<code class="docutils literal notranslate"><span class="pre">.</span></code> to stage all changes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>file.txt
+</pre></div>
+</div>
+</section>
+<section id="git-commit-committing-changes">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> - Committing Changes<a class="headerlink" href="#git-commit-committing-changes" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Create a new commit to save the staged changes with a descriptive
+commit message.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added feature X&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="git-branch-managing-branches">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> - Managing Branches<a class="headerlink" href="#git-branch-managing-branches" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> List, create, or delete branches. Use <code class="docutils literal notranslate"><span class="pre">-a</span></code> to list remote branches.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>feature-branch
+</pre></div>
+</div>
+</section>
+<section id="git-checkout-switching-between-branches">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> - Switching Between Branches<a class="headerlink" href="#git-checkout-switching-between-branches" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Switch to a different branch. You can also use this command to
+create a new branch with the <code class="docutils literal notranslate"><span class="pre">-b</span></code> flag.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>feature-branch
+</pre></div>
+</div>
+</section>
+<section id="git-merge-merging-branches">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code> - Merging Branches<a class="headerlink" href="#git-merge-merging-branches" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Merge changes from one branch into another. Usually used to integrate
+feature branches into the main branch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>feature-branch
+</pre></div>
+</div>
+</section>
+<section id="git-pull-updating-your-local-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> - Updating Your Local Repository<a class="headerlink" href="#git-pull-updating-your-local-repository" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Fetch and merge changes from a remote repository. Equivalent to <code class="docutils literal notranslate"><span class="pre">git</span>
+<span class="pre">fetch</span></code> followed by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+</section>
+<section id="git-push-pushing-changes-to-a-remote-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> - Pushing Changes to a Remote Repository<a class="headerlink" href="#git-push-pushing-changes-to-a-remote-repository" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Upload your local commits to a remote repository, making your changes
+available to others.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+</section>
+<section id="git-log-viewing-commit-history">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> - Viewing Commit History<a class="headerlink" href="#git-log-viewing-commit-history" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> View a log of all commits in the current branch, including commit
+messages, authors, and commit hashes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log
+</pre></div>
+</div>
+</section>
+<section id="git-diff-viewing-changes-between-commits">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> - Viewing Changes Between Commits<a class="headerlink" href="#git-diff-viewing-changes-between-commits" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Compare differences between two commits, branches, or the working
+directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>HEAD~1..HEAD
+</pre></div>
+</div>
+</section>
+<section id="git-stash-temporarily-stashing-changes">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code> - Temporarily Stashing Changes<a class="headerlink" href="#git-stash-temporarily-stashing-changes" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> Temporarily save your uncommitted changes to work on something else,
+then reapply the changes later.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>stash
+</pre></div>
+</div>
+</section>
+<section id="git-remote-managing-remote-repositories">
+<h2><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span></code> - Managing Remote Repositories<a class="headerlink" href="#git-remote-managing-remote-repositories" title="Link to this heading"></a></h2>
+<p><strong>Usage:</strong> List, add, or remove remote repositories that your local repository
+can interact with.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/upstream/repo.git
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module7_conclusion.html" class="btn btn-neutral float-left" title="Module 7 - Conclusion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Phil Charron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

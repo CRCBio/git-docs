@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 4 - Collaborating with GitHub &mdash; Git 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 5 - Advanced Git and GitHub Concepts" href="module5_advanced_git_and_github_concepts.html" />
+    <link rel="prev" title="Module 3 - Branching and Merging" href="module3_branching_and_merging.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="module1_understanding_git_and_version_control.html">Module 1 - Understanding Git and Version Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2_working_with_git_locally.html">Module 2 - Working with Git Locally</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3_branching_and_merging.html">Module 3 - Branching and Merging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 4 - Collaborating with GitHub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-github">Introduction to GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forking-and-cloning-repositories">Forking and Cloning Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-and-pulling-changes">Pushing and Pulling Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module5_advanced_git_and_github_concepts.html">Module 5 - Advanced Git and GitHub Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6_troubleshooting.html">Module 6 - Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7_conclusion.html">Module 7 - Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git_cheatsheet.html">Git Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Module 4 - Collaborating with GitHub</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/module4_collaborating_with_github.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-4-collaborating-with-github">
+<h1>Module 4 - Collaborating with GitHub<a class="headerlink" href="#module-4-collaborating-with-github" title="Link to this heading"></a></h1>
+<section id="introduction-to-github">
+<h2>Introduction to GitHub<a class="headerlink" href="#introduction-to-github" title="Link to this heading"></a></h2>
+<p>Collaboration is at the heart of bioinformatics research, and GitHub is a
+platform that facilitates collaboration on code and data. GitHub acts as a
+central hub for hosting Git repositories and provides tools for team
+collaboration, code review, and project management. To begin collaborating with
+GitHub, you’ll first need to create an account on the platform.</p>
+</section>
+<section id="forking-and-cloning-repositories">
+<h2>Forking and Cloning Repositories<a class="headerlink" href="#forking-and-cloning-repositories" title="Link to this heading"></a></h2>
+<p>Once you’re logged in, you can start by <strong>forking</strong> an existing repository.
+Forking essentially creates a copy of the repository in your own GitHub
+account. This allows you to work on the project independently and make changes
+without affecting the original repository.</p>
+<p>After forking, you’ll want to bring the repository to your local machine. This
+is done using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command, followed by the URL of your forked
+repository on GitHub. Cloning sets up a local copy of the repository on your
+computer, enabling you to work on it just like any other Git repository.</p>
+<div class="admonition-task admonition">
+<p class="admonition-title">Task</p>
+<p><strong>Step 1: Find the Repository to Fork</strong></p>
+<p>Navigate to the GitHub repository of the tool you want to customize. Use
+the search bar or go directly to the repository’s URL.</p>
+<p><strong>Step 2: Fork the Repository</strong></p>
+<p>On the top-right corner of the repository’s page, you’ll see a “Fork”
+button. Click this button to create a fork of the repository in your GitHub
+account.</p>
+<p><strong>Step 3: Clone Your Fork Locally</strong></p>
+<p>Now that you have a fork of the repository in your GitHub account, you need
+to clone it to your local machine to start making customizations.</p>
+<ol class="arabic simple">
+<li><p>Clone your forked repository using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command, replacing
+<code class="docutils literal notranslate"><span class="pre">&lt;your_username&gt;</span></code> with your GitHub username and <code class="docutils literal notranslate"><span class="pre">&lt;repository_name&gt;</span></code> with
+the name of the forked repository:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;your_username&gt;/&lt;repository_name&gt;.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Change into the cloned directory:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;repository_name&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="pushing-and-pulling-changes">
+<h2>Pushing and Pulling Changes<a class="headerlink" href="#pushing-and-pulling-changes" title="Link to this heading"></a></h2>
+<p>As you make changes to your local copy, you’ll want to keep your fork on
+GitHub up to date. This is achieved using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command, which
+uploads your local changes to your forked repository on GitHub. Conversely,
+you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> to retrieve changes made by others from the remote
+repository.</p>
+<div class="admonition-task admonition">
+<p class="admonition-title">Task</p>
+<p><strong>Pushing Changes with</strong> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p>
+<p>After making changes to your repository, you’ll want to upload those
+changes to your repository on GitHub using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;branch_name&gt;
+</pre></div>
+</div>
+<p><strong>Pulling Changes with</strong> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p>
+<p>To retrieve changes made by others from the remote repository, you can use
+the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> command. First, ensure you’re on the branch where you want
+to incorporate the changes. You can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&lt;branch_name&gt;</span></code> to
+switch to the appropriate branch if needed.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>&lt;branch_name&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="pull-requests">
+<h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Link to this heading"></a></h2>
+<p>In a collaborative bioinformatics project, you’ll often need to request that
+your changes be integrated into the main project. This is done through a “pull
+request.” A pull request is a request to merge your changes from your forked
+repository into the original repository. It allows for discussion and code
+review before merging. You can create a pull request on GitHub, describe your
+changes, and request that someone else review and approve your work.</p>
+<div class="admonition-task admonition">
+<p class="admonition-title">Task</p>
+<p><strong>Step 1: Find the Repository to Fork</strong></p>
+<p>Once you’ve made changes and pushed them to your GitHub forked repository,
+you can begin the pull request process.</p>
+<ol class="arabic simple">
+<li><p>Visit your forked repository on GitHub.</p></li>
+<li><p>Switch to the branch you just pushed using the branch switcher on the
+repository’s main page.</p></li>
+<li><p>Click the “New Pull Request” button.</p></li>
+<li><p>You will be prompted to choose the base repository and branch (the
+repository and branch you want to merge your changes into) and the
+compare repository and branch (your fork and the branch with your
+changes).</p></li>
+<li><p>GitHub will display the changes you’ve made. Review them to ensure they
+look correct.</p></li>
+<li><p>Provide a title and description for your pull request. Be clear and
+descriptive about the changes you’ve made.</p></li>
+<li><p>Optionally, you can assign reviewers, request feedback, and label your
+pull request to provide more context.</p></li>
+<li><p>Click the “Create Pull Request” button to submit your pull request.</p></li>
+</ol>
+<p><strong>Step 2: Collaborate and Review</strong></p>
+<p>Collaborators or maintainers of the repository will review your pull
+request. They may request changes or ask for more information.</p>
+<p><strong>Step 3: Address Feedback (if needed)</strong></p>
+<p>If there are changes requested, make the necessary changes locally, commit
+them, and push them to your branch on GitHub. The pull request will be
+automatically updated.</p>
+<p><strong>Step 4: Merge the Pull Request</strong></p>
+<p>Once your pull request is approved and the required changes are made, a
+repository collaborator can merge your changes into the main codebase.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module3_branching_and_merging.html" class="btn btn-neutral float-left" title="Module 3 - Branching and Merging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module5_advanced_git_and_github_concepts.html" class="btn btn-neutral float-right" title="Module 5 - Advanced Git and GitHub Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Phil Charron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
